@@ -1,0 +1,103 @@
+
+*{
+    font-family: monospace;
+    color: white;
+}
+
+body{
+    margin: 0 auto;
+    background-image: url(space.jpg);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    width: 20%;
+}
+
+img {
+    margin-top: 70px;
+    margin-bottom: 150px;
+    margin-right: 20px;
+    
+    transition: transform 1.0s ease-in-out;
+}
+/* #clockwise:hover {
+    transform: rotate(360deg);
+}    */
+  
+#clockwise{
+    animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+#counterclockwise{
+    animation: rotationcc 6s infinite linear;
+}
+@keyframes rotationcc {
+    from {
+      transform: rotate(359deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+}
+
+button {
+    background-color: #1f4277;
+    border: 3px solid #1f4277;
+    color: white;
+    padding: 10px 10px;
+    font-size: 20px;
+    margin: 10px 2px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .5s;
+}  
+
+button:hover{
+    background-color: #1f4277;
+    color: white;
+    border: 3px solid white;
+    
+}
+
+.wrapper {
+    font-size: 20px;
+    height: 10vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+}
+  
+.typing-effect {
+    width: 20ch;
+    animation: typing 2s steps(20), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    font-family: monospace;
+    font-size: 2em;
+}
+  
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+      
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
