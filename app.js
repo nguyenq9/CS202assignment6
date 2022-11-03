@@ -52,5 +52,21 @@ function hehe() {
 }
 
 function teehee(i) {
-  alert("Name: " + names[i] + "\nCraft: " + craft[i] );
+  swal("Name: " + names[i] + "\nCraft: " + craft[i], {
+    buttons: {
+      cancel: "Close",
+      open: {
+        text: "Search",
+        value: "open",
+      },
+    },
+  })
+  .then((value) => {
+    switch (value) {
+      case "open":
+        window.open("https://www.google.co.in/search?q=" + names[i] + " astronaut");
+        break;
+      default:
+    }
+  });
 }
