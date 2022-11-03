@@ -49,7 +49,7 @@ function hehe() {
   elem = document.getElementById('type');
   elem.parentNode.removeChild(elem);
 
-  var h = document.createElement("h1");
+  var h = document.createElement("H1");
   var t = document.createTextNode("There are " + number + " people in space.");
   h.appendChild(t);
   document.body.appendChild(h);
