@@ -46,6 +46,14 @@ function createAstronaut(i) {
 function hehe() {
   var elem = document.getElementById('btn');
   elem.parentNode.removeChild(elem);
+  elem = document.getElementById('type');
+  elem.parentNode.removeChild(elem);
+
+  var h = document.createElement("h1");
+  var t = document.createTextNode("There are " + number + " people in space.");
+  h.appendChild(t);
+  document.body.appendChild(h);
+
   for (let i = 0; i < number; i++) {
     createAstronaut(i)
   }
